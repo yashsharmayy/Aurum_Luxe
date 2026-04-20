@@ -1,68 +1,56 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@import "tailwindcss";
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@theme {
+  --font-cormorant: "Cormorant Garamond", serif;
+  --font-DMsans: "DM Sans", sans-serif;
+  --font-playfire: "Playfair Display", serif;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+@theme {
+  --color-cream09: #fffbf5;
+  --color-ivory19: #f7f3ed;
+  --color-warm-white29: #fefcf9;
+  --color-gold39: #b8860b;
+  --color-gold-light49: #d4a853;
+  --color-gold-dark59: #8b6914;
+  --color-charcoal69: #1c1c1c;
+  --color-charcoal-soft79: #212020;
+  --color-taupe89: #a69080;
+  --color-taupe-light99: #c4b5a5;
 }
-a:hover {
-  color: #535bf2;
+@layer components {
+  .paraCSS {
+    @apply text-taupe-light99 text-lg my-4;
+  }
+  .img-transform {
+    @apply w-full h-full transition-transform hover:scale-110 duration-700 ease-in-out object-cover object-center;
+  }
+  .bres-width {
+    @apply w-20 lg:w-25 md:m-2 lg:m-4 lg:mx-8 text-center;
+  }
+  .paracss2 {
+    @apply text-taupe89  my-2;
+  }
 }
-
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  font-family: var(--font-DMsans);
+  color: var(--color-charcoal69);
+  position: relative;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  background-color: var(--color-cream09);
+}
+html {
+  scroll-behavior: smooth;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.menubtn {
+  display: none;
+  margin-right: 10px;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
+@media (max-width: 700px) {
+  .menubtn {
+    display: block; /* or inline-block / flex depending on your layout */
   }
 }
