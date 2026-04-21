@@ -10,7 +10,7 @@ Built using **React.js**, **Tailwind CSS**, and **GSAP**, Aurum Luxe represents 
 ## 🌐 Live Demo
 
 🔗 Add your live website link here  
-`https://yourwebsite.com`
+`https://yashsharmayy.github.io/Aurum_Luxe/`
 
 ---
 
