@@ -1,16 +1,84 @@
-# React + Vite
+# 💎 Aurum Luxe – Luxury Jewellery Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aurum Luxe is a modern and elegant jewellery website created to showcase premium jewellery collections with a luxurious online experience.  
+This project focuses on combining **beautiful design**, **smooth animations**, and **responsive layouts** to give users a premium shopping-style feel.
 
-Currently, two official plugins are available:
+Built using **React.js**, **Tailwind CSS**, and **GSAP**, Aurum Luxe represents a stylish frontend project with attention to UI/UX and performance.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🌐 Live Demo
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+🔗 Add your live website link here  
+`https://yourwebsite.com`
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📌 About The Project
+
+The goal of Aurum Luxe is to create a jewellery brand website that feels luxurious, clean, and modern.  
+It includes smooth scrolling effects, animated sections, responsive product showcases, and elegant layouts that work seamlessly across all devices.
+
+This project helped improve skills in:
+
+- Component-based development with React  
+- Responsive design using Tailwind CSS  
+- Advanced animations with GSAP  
+- Layout structuring and clean UI design  
+- Creating premium brand aesthetics  
+
+---
+
+## ✨ Key Features
+
+### 💍 Premium Jewellery Showcase
+Display beautiful jewellery collections in a clean and attractive way.
+
+### 🎬 Smooth GSAP Animations
+Modern transitions, scroll animations, and interactive effects for better engagement.
+
+### 📱 Fully Responsive Design
+Optimized for:
+
+- Mobile devices  
+- Tablets  
+- Laptops  
+- Desktop screens  
+
+### ⚡ Fast Performance
+Built with React for fast rendering and dynamic UI updates.
+
+### 🎨 Elegant User Interface
+Luxury-inspired color palette, spacing, typography, and premium layout style.
+
+### 🧩 Reusable Components
+Organized React components for easier scalability and maintenance.
+
+---
+
+## 🛠️ Technologies Used
+
+| Technology | Purpose |
+|-----------|---------|
+| React.js | Frontend UI Development |
+| Tailwind CSS | Styling & Responsive Design |
+| GSAP | Animations & Motion Effects |
+| JavaScript | Logic & Interactivity |
+| Vite | Fast Build Tool |
+
+---
+
+## 📂 Project Structure
+
+```bash
+Aurum_Luxe/
+│── public/
+│── src/
+│   ├── assets/
+│   ├── components/
+│   ├── pages/
+│   ├── App.jsx
+│   └── main.jsx
+│── package.json
+│── tailwind.config.js
+│── vite.config.js
