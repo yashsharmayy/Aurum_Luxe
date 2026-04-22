@@ -7,6 +7,9 @@ const Section2 = () => {
     const priceref = useRef()
 
     useEffect(() => {
+        const startValue =
+            window.innerWidth < 768 ? "top 45%" : "top 65%";
+
         gsap.from(imgref.current, {
             y: 80,
             opacity: 0,
@@ -14,10 +17,9 @@ const Section2 = () => {
             ease: "power3.out",
             scrollTrigger: {
                 trigger: imgref.current,
-                start: "top 65%",
-                // markers: true
-            }
-        })
+                start: startValue,
+            },
+        });
 
         gsap.from(priceref.current.children, {
             y: 50,
@@ -27,11 +29,10 @@ const Section2 = () => {
             ease: "power3.out",
             scrollTrigger: {
                 trigger: priceref.current,
-                start: "top 65%",
-                // markers: true
-            }
-        })
-    }, [])
+                start: startValue,
+            },
+        });
+    }, []);
     return (
         <div ref={imgref} className='w-full h-full flex flex-col md:flex-row p-10 py-24 lg:p-20 overflow-hidden justify-evenly items-center bg-ivory19'>
             <div className='relative lg:w-200 lg:mt-40 overflow-hidden'>

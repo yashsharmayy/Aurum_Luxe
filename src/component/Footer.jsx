@@ -11,6 +11,9 @@ const Footer = () => {
 
 
     useEffect(() => {
+        const startValue =
+            window.innerWidth < 768 ? "top 45%" : "top 65%";
+
         gsap.from(contentRef.current.children, {
             y: 50,
             opacity: 0,
@@ -18,10 +21,9 @@ const Footer = () => {
             ease: "power3.out",
             scrollTrigger: {
                 trigger: contentRef.current,
-                start: "top 65%",
-                // markers: true
-            }
-        })
+                start: startValue,
+            },
+        });
 
         gsap.from(contentRef2.current.children, {
             y: 50,
@@ -31,10 +33,10 @@ const Footer = () => {
             ease: "power3.out",
             scrollTrigger: {
                 trigger: contentRef2.current,
-                start: "top 65%",
-                // markers: true
-            }
-        })
+                start: startValue,
+            },
+        });
+
         gsap.from(contentRef3.current.children, {
             y: 50,
             opacity: 0,
@@ -43,10 +45,10 @@ const Footer = () => {
             ease: "power3.out",
             scrollTrigger: {
                 trigger: contentRef3.current,
-                start: "top 65%",
-                // markers: true
-            }
-        })
+                start: startValue,
+            },
+        });
+
         gsap.from(contentRef4.current.children, {
             y: 50,
             opacity: 0,
@@ -54,12 +56,11 @@ const Footer = () => {
             duration: 0.8,
             ease: "power3.out",
             scrollTrigger: {
-                trigger: contentRef3.current,
-                start: "top 65%",
-                // markers: true
-            }
-        })
-    }, [])
+                trigger: contentRef4.current,
+                start: startValue,
+            },
+        });
+    }, []);
     return (
         <div className='w-full h-full text-white z-20  relative bg-charcoal69 pt-18   p-6 lg:px-20 overflow-hidden'>
             <div className='absolute  bottom-0 w-100 left-[30%] h-[200%] -top-[50%] bg-charcoal-soft79 transform rotate-10'></div>

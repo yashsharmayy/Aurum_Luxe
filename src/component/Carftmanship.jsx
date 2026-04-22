@@ -11,6 +11,9 @@ const Carftmanship = () => {
 
 
     useEffect(() => {
+        const startValue =
+            window.innerWidth < 768 ? "top 45%" : "top 65%";
+
         gsap.from(contentRef.current.children, {
             y: 80,
             opacity: 0,
@@ -18,10 +21,9 @@ const Carftmanship = () => {
             ease: "power3.out",
             scrollTrigger: {
                 trigger: contentRef.current,
-                start: "top 65%",
-                // markers: true
-            }
-        })
+                start: startValue,
+            },
+        });
 
         gsap.from(imgRef.current.children, {
             y: 50,
@@ -31,11 +33,10 @@ const Carftmanship = () => {
             ease: "power3.out",
             scrollTrigger: {
                 trigger: imgRef.current,
-                start: "top 65%",
-                // markers: true
-            }
-        })
-    }, [])
+                start: startValue,
+            },
+        });
+    }, []);
     return (
         <div id='carftmanship' className='w-full h-full overflow-hidden bg-ivory19 flex md:flex-row flex-col-reverse p-2 md:p-20 py-40 justify-evenly items-center'>
             <div ref={contentRef} className=' md:w-1/2 lg:w-1/3 m-4 '>

@@ -8,6 +8,9 @@ const Storysec = () => {
 
 
     useEffect(() => {
+        const startValue =
+            window.innerWidth < 768 ? "top 45%" : "top 65%";
+
         gsap.from(headref.current.children, {
             y: 80,
             opacity: 0,
@@ -15,10 +18,9 @@ const Storysec = () => {
             ease: "power3.out",
             scrollTrigger: {
                 trigger: headref.current,
-                start: "top 65%",
-                // markers: true
-            }
-        })
+                start: startValue,
+            },
+        });
 
         gsap.from(galleryRef.current.children, {
             y: 50,
@@ -28,11 +30,10 @@ const Storysec = () => {
             ease: "power3.out",
             scrollTrigger: {
                 trigger: galleryRef.current,
-                start: "top 65%",
-                // markers: true
-            }
-        })
-    }, [])
+                start: startValue,
+            },
+        });
+    }, []);
     return (
         <div id='story' className=' h-full md:h-[136vh]   w-full flex flex-col md:flex-row overflow-hidden justify-evenly '>
             <div ref={headref} className='bg-charcoal69 text-white   md:w-2/5 flex flex-col justify-center p-15 py-30 lg:p-24'>

@@ -12,6 +12,9 @@ const Contect = () => {
 
 
     useEffect(() => {
+        const startValue =
+            window.innerWidth < 768 ? "top 45%" : "top 65%";
+
         gsap.from(addressRef.current.children, {
             y: 80,
             opacity: 0,
@@ -19,10 +22,9 @@ const Contect = () => {
             ease: "power3.out",
             scrollTrigger: {
                 trigger: addressRef.current,
-                start: "top 65%",
-                // markers: true
-            }
-        })
+                start: startValue,
+            },
+        });
 
         gsap.from(contectRef.current.children, {
             y: 50,
@@ -32,11 +34,10 @@ const Contect = () => {
             ease: "power3.out",
             scrollTrigger: {
                 trigger: contectRef.current,
-                start: "top 65%",
-                // markers: true
-            }
-        })
-    }, [])
+                start: startValue,
+            },
+        });
+    }, []);
     return (
         <div id='contact' className='w-full h-full flex md:flex-row flex-col items-center bg-ivory19 p-6 md:p-10 py-28 '>
             <div ref={addressRef} className='p-6 md:w-1/2 w-full'>
