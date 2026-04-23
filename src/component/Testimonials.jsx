@@ -11,11 +11,7 @@ const Testimonials = () => {
 
 
     useEffect(() => {
-        gsap.registerPlugin(ScrollTrigger);
-
-        const startValue =
-            window.innerWidth < 768 ? "top 45%" : "top 65%";
-
+        gsap.registerPlugin(ScrollTrigger)
         gsap.from(contentRef.current.children, {
             y: 80,
             opacity: 0,
@@ -23,21 +19,24 @@ const Testimonials = () => {
             ease: "power3.out",
             scrollTrigger: {
                 trigger: contentRef.current,
-                start: startValue,
-            },
-        });
+                start: "top 50%",
+                // markers: true
+            }
+        })
 
         gsap.from(cardRef.current, {
             y: 50,
             opacity: 0,
+            stagger: 0.2,
             duration: 0.8,
             ease: "power3.out",
             scrollTrigger: {
                 trigger: cardRef.current,
-                start: startValue,
-            },
-        });
-    }, []);
+                start: "top 50%",
+                // markers: true
+            }
+        })
+    }, [])
     return (
         <div className=' w-full h-full bg-cream09 py-40  p-10 text-center'>
             <div ref={contentRef}>

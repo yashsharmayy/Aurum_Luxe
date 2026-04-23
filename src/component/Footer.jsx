@@ -11,9 +11,6 @@ const Footer = () => {
 
 
     useEffect(() => {
-        const startValue =
-            window.innerWidth < 768 ? "top 20%" : "top 65%";
-
         gsap.from(contentRef.current.children, {
             y: 50,
             opacity: 0,
@@ -21,9 +18,10 @@ const Footer = () => {
             ease: "power3.out",
             scrollTrigger: {
                 trigger: contentRef.current,
-                start: startValue,
-            },
-        });
+                start: "top 50%",
+                // markers: true
+            }
+        })
 
         gsap.from(contentRef2.current.children, {
             y: 50,
@@ -33,10 +31,10 @@ const Footer = () => {
             ease: "power3.out",
             scrollTrigger: {
                 trigger: contentRef2.current,
-                start: startValue,
-            },
-        });
-
+                start: "top 50%",
+                // markers: true
+            }
+        })
         gsap.from(contentRef3.current.children, {
             y: 50,
             opacity: 0,
@@ -45,10 +43,10 @@ const Footer = () => {
             ease: "power3.out",
             scrollTrigger: {
                 trigger: contentRef3.current,
-                start: startValue,
-            },
-        });
-
+                start: "top 50%",
+                // markers: true
+            }
+        })
         gsap.from(contentRef4.current.children, {
             y: 50,
             opacity: 0,
@@ -56,11 +54,12 @@ const Footer = () => {
             duration: 0.8,
             ease: "power3.out",
             scrollTrigger: {
-                trigger: contentRef4.current,
-                start: startValue,
-            },
-        });
-    }, []);
+                trigger: contentRef3.current,
+                start: "top 50%",
+                // markers: true
+            }
+        })
+    }, [])
     return (
         <div className='w-full h-full text-white z-20  relative bg-charcoal69 pt-18   p-6 lg:px-20 overflow-hidden'>
             <div className='absolute  bottom-0 w-100 left-[30%] h-[200%] -top-[50%] bg-charcoal-soft79 transform rotate-10'></div>
@@ -71,7 +70,7 @@ const Footer = () => {
                     <p className='paracss2 cursor-pointer hover:text-gold-dark59'>Handcrafted gold jewelry of exceptional quality and timeless elegance. Family-owned atelier since 1987.</p>
                     <p className='paracss2 cursor-pointer hover:text-gold-dark59'>742 Fifth Avenue, Suite 1200</p>
                     <p className='paracss2 cursor-pointer hover:text-gold-dark59'>New York, NY 10019</p>
-                    <p className='paracss2 cursor-pointer hover:text-gold-dark59'>+91 9988776655</p>
+                    <p className='paracss2 cursor-pointer hover:text-gold-dark59'>+91 9988776505</p>
                     <p className='paracss2 cursor-pointer hover:text-gold-dark59'>weblysite1804@gmail.com</p>
                 </div>
 

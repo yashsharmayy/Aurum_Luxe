@@ -12,9 +12,6 @@ const Contect = () => {
 
 
     useEffect(() => {
-        const startValue =
-            window.innerWidth < 768 ? "top 45%" : "top 65%";
-
         gsap.from(addressRef.current.children, {
             y: 80,
             opacity: 0,
@@ -22,10 +19,10 @@ const Contect = () => {
             ease: "power3.out",
             scrollTrigger: {
                 trigger: addressRef.current,
-                start: startValue,
-
-            },
-        });
+                start: "top 50%",
+                // markers: true
+            }
+        })
 
         gsap.from(contectRef.current.children, {
             y: 50,
@@ -35,10 +32,11 @@ const Contect = () => {
             ease: "power3.out",
             scrollTrigger: {
                 trigger: contectRef.current,
-                start: startValue,
-            },
-        });
-    }, []);
+                start: "top 50%",
+                // markers: true
+            }
+        })
+    }, [])
     return (
         <div id='contact' className='w-full h-full flex md:flex-row flex-col items-center bg-ivory19 p-6 md:p-10 py-28 '>
             <div ref={addressRef} className='p-6 md:w-1/2 w-full'>
@@ -48,7 +46,7 @@ const Contect = () => {
                 <div>
                     <Address head={"Address"} detail1={"742 prem nagaar 3rd, kirari "} detail2={"New delhi, 110086"} />
                     <Address head={"Hours"} detail1={"Tuesday – Saturday, 10:00 AM to 06:00 PM "} detail2={"Sunday - Monday, By Appointment"} />
-                    <Address head={"Contact"} detail1={"+91 9988776655"} detail2={"weblysite1804@gmail.com"} />
+                    <Address head={"Contact"} detail1={"+91 9988776505"} detail2={"weblysite1804@gmail.com"} />
                 </div>
 
             </div>

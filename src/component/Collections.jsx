@@ -8,9 +8,6 @@ const Collections = () => {
 
 
     useEffect(() => {
-        const startValue =
-            window.innerWidth < 768 ? "top 20%" : "top 65%";
-
         gsap.from(headref.current.children, {
             y: 80,
             opacity: 0,
@@ -18,9 +15,10 @@ const Collections = () => {
             ease: "power3.out",
             scrollTrigger: {
                 trigger: headref.current,
-                start: startValue,
-            },
-        });
+                start: "top 50%",
+                // markers: true
+            }
+        })
 
         gsap.from(galleryRef.current.children, {
             y: 50,
@@ -30,10 +28,11 @@ const Collections = () => {
             ease: "power3.out",
             scrollTrigger: {
                 trigger: galleryRef.current,
-                start: startValue,
-            },
-        });
-    }, []);
+                start: "top 50%",
+                // markers: true
+            }
+        })
+    }, [])
     return (
         <div id='collections' className='w-full h-full lg:mb-30  p-10 py-20 lg:p-20 overflow-hidden  bg-cream09'>
             <div ref={headref} className='flex flex-col group h-full md:flex-row my-20 items-start md:items-center justify-between'>
