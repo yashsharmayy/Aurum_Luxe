@@ -23,6 +23,7 @@ const Contect = () => {
             scrollTrigger: {
                 trigger: addressRef.current,
                 start: startValue,
+                markers: true
             },
         });
 

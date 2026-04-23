@@ -9,7 +9,7 @@ const Storysec = () => {
 
     useEffect(() => {
         const startValue =
-            window.innerWidth < 768 ? "top 45%" : "top 65%";
+            window.innerWidth < 768 ? "top 20%" : "top 65%";
 
         gsap.from(headref.current.children, {
             y: 80,

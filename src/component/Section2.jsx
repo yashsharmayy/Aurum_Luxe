@@ -8,7 +8,7 @@ const Section2 = () => {
 
     useEffect(() => {
         const startValue =
-            window.innerWidth < 768 ? "top 45%" : "top 65%";
+            window.innerWidth < 768 ? "top 20%" : "top 65%";
 
         gsap.from(imgref.current, {
             y: 80,
