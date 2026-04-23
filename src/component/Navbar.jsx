@@ -45,7 +45,7 @@ function Navbar() {
   return (
     <div
       ref={navref}
-      className="w-full  z-100 top-0 left-0 sticky bg-[#fffbf5c0] p-8 lg:px-15 flex justify-between items-center"
+      className="w-full overflow-x-hidden  z-100 top-0 left-0 sticky bg-[#fffbf5c0] p-8 lg:px-15 flex justify-between items-center"
     >
       <div className="logo mx-6 flex">
         <a href="#"> <h1 className="text-2xl lg:text-4xl font-cormorant">
