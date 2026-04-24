@@ -71,7 +71,7 @@ const HeroPage = () => {
     }, []);
 
     return (
-        <div className=' h-full md:h-screen -mt-30 w-full flex flex-col-reverse md:flex-row overflow-hidden justify-evenly '>
+        <div className='  h-full md:h-screen  w-full flex flex-col-reverse md:flex-row overflow-hidden justify-evenly '>
             <div ref={headref} className='  md:w-1/2 flex flex-col justify-center p-16 lg:p-24'>
                 <h2 className='text-taupe89 font-DMsans  text-lg lg:text-xl my-5'>Artisan  Gold  Jewelry Since 1987</h2>
                 <h1 className='font-cormorant text-5xl lg:text-6xl my-8  md:my-5'>Where Gold <br />Becomes <span className='text-gold-light49'>Art</span></h1>
